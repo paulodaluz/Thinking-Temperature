@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 module.exports = {
   onAirConditioning(req: Request, res: Response) {
-    res.status(200).json({response: 'Desligando ar condicionado'});
+    res.status(200).json({response: 'Ligando ar condicionado'});
   },
 
   offAirConditioning(req: Request, res: Response) {
