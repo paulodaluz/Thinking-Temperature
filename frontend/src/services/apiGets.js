@@ -16,7 +16,7 @@ export const automaticModeAirConditioning = () => {
 }
 export const offAirConditioning = () => {
     return new Promise((resolve, reject) => {
-        axios.get(`${api}/films/`)
+        axios.get(`${api}`)
             .then(dados => {
                 resolve(dados.data.results)
             })
@@ -38,7 +38,7 @@ export const onAirConditioning = () => {
 }
 export const getSpecies = () => {
     return new Promise((resolve, reject) => {
-        axios.get(`${api}/species/`)
+        axios.get(`${api}`)
             .then(dados => {
                 resolve(dados.data.results)
             })
@@ -50,7 +50,7 @@ export const getSpecies = () => {
 
 export const getStarships = () => {
     return new Promise((resolve, reject) => {
-        axios.get(`${api}/starships/`)
+        axios.get(`${api}`)
             .then(dados => {
                 resolve(dados.data.results)
             })
