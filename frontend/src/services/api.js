@@ -5,5 +5,5 @@ export const getTemperature = () => {
 }
 
 export const getQntPeople = () => {    
-
+    
 }
