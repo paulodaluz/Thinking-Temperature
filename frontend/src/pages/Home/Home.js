@@ -29,8 +29,8 @@ export default class Home extends Component {
             measurementId: "G-N4GLTXMTK5"
           };
           // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-          this.pegarDados();
+          /* firebase.initializeApp(firebaseConfig); */
+          /* this.pegarDados(); */
     }
 
     automaticModeAirConditioning(){
