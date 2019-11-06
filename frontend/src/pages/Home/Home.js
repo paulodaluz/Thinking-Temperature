@@ -12,7 +12,7 @@ export default class Home extends Component {
         super()
         this.state = {
             pessoas: 17,
-            temperatura: [],
+            temperatura: 27.5,
             automaticModeAir: false,
             offAirConditioning: false,
             onAirConditioning: false,
@@ -30,7 +30,6 @@ export default class Home extends Component {
           };
           // Initialize Firebase
           /* firebase.initializeApp(firebaseConfig); */
-          /* this.pegarDados(); */
     }
 
     automaticModeAirConditioning(){
@@ -51,39 +50,13 @@ export default class Home extends Component {
         this.salvarDados();
         console.log('Modo Automático ativado')
     }
-
-/*     pegarDados() {
-
-        firebase
-          .database()
-          .ref('/pessoas')
-          .on('value', snapchot => {
-            let dados = snapchot.val()
-            this.setState({ pessoas: 0 })
-            if (dados) {
-              const Keys = Object.keys(dados)
-                console.log(Keys)
-              const pessoas = Keys.map(id => {
-                return { ...dados[id], id }
-              })
-              this.setState({ pessoas: pessoas })
-            }
-        })
-    } */
       
-
     render() {
         return (
             <div className="imagem-background-home padding-principal">
                 <div className="painel">
                     <h3 className="title-inside-table">Temperatura</h3>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <h1 className="numero-de-pessoas">{this.state.temperatura}°C</h1>
                     <h3 className="title-inside-table">
                         Quantidade de pessoas dentro da sala
                         </h3>

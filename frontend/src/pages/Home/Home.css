@@ -1,66 +1,64 @@
 .padding-principal {
-    padding: 40px 0 0 0px
+  padding: 40px 0 0 0px;
 }
 
 .imagem-background-home {
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/imagemHome.jpg );
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/imagemHome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .botao {
-    width: 173px;
-    padding: 19px 15px;
-    border-radius: 4px;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    border: 0px;
-    color: #ffff;
-    margin-bottom: 40px;
-    text-align-last: center;
-    background-color: #609;
-    margin-top: 40px;
+  width: 173px;
+  padding: 19px 15px;
+  border-radius: 4px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  border: 0px;
+  color: #ffff;
+  margin-bottom: 40px;
+  text-align-last: center;
+  background-color: #609;
+  margin-top: 40px;
 }
 
 .div-botoes {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 .painel {
-    margin: auto;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 3px 20px 0 rgba(0,0,0,.15);
-    box-shadow: 0 0 0 1px rgba(0,0,0,.25), 0 3px 20px 0 rgba(0,0,0,.15);
-    background-color: #f9f9fb;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
+  margin: auto;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25),
+    0 3px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 3px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: #f9f9fb;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
 }
 
 .title-inside-table {
-    color: #777777;
-    text-align: center;
+  color: #777777;
+  text-align: center;
 }
 
 .numero-de-pessoas {
-    text-align-last: center;
-    font-size: 100px;
+  text-align-last: center;
+  font-size: 76px;
 }
 
 .numero-de-temperatura {
-    text-align-last: center;
-    font-size: 100px;
+  text-align-last: center;
+  font-size: 100px;
 }
 
 @media only screen and (max-width: 769px) {
-
-    .padding-principal {
-        padding: 20px 20px 0 20px;
-    }
-
+  .padding-principal {
+    padding: 20px 20px 0 20px;
+  }
 }
