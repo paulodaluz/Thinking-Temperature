@@ -29,8 +29,8 @@ export default class Login extends Component {
     logar = async() => {
         this.setState({ loading: true })
         await login(this.state.email, this.state.password)
-            .then(() => this.props.history.push("/home"), this.setState({ loading: false }))
-            .catch(erro => this.setState({ errorMessage: erro.message }), this.setState({ loading: false }))
+            .then(() => this.props.history.push("/home"))
+            .catch(erro => this.setState({ errorMessage: erro.message }))
     }
 
     render() {
