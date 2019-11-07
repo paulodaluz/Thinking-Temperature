@@ -68,7 +68,7 @@ export default class Login extends Component {
                         />
 
                         <div className="criar-cadastro">
-                            <Link to="/cadastro">Voce ainda não possui uma conta?</Link>
+                            <Link to="#">Voce ainda não possui uma conta?</Link>
                         </div>
                     </Form>
                 </div>

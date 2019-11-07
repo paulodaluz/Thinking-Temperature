@@ -13,8 +13,8 @@ function App() {
     <div>
       <HashRouter>
         <Switch>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/login" exact={true} component={Login} />
+          <Route path="/" exact={true} component={Login} />
+          <Route path="/home" exact={true} component={Home} />
         </Switch>
       </HashRouter>
     </div>
