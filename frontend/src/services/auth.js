@@ -35,6 +35,4 @@ export const logoff = () => {
         sessionStorage.removeItem("UID")
         resolve()
     })
-
-
 }
