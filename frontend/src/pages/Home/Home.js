@@ -1,35 +1,33 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
 
 // Importando CSS
 import './Home.css';
+import { getQntPeople, getTemperature } from '../../services/api';
 
 // Import Componentes
 
 
 export default class Home extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-            pessoas: 17,
-            temperatura: 27.5,
+            pessoas: 0,
+            temperatura: 0,
             automaticModeAir: false,
             offAirConditioning: false,
             onAirConditioning: false,
         }
+        this.atualizarDados()
+    }
 
-        var firebaseConfig = {
-            apiKey: "AIzaSyBaTlxXD-D6fuovMMfFfEmYVvi5ECG3tFs",
-            authDomain: "thinking-temperature.firebaseapp.com",
-            databaseURL: "https://thinking-temperature.firebaseio.com",
-            projectId: "thinking-temperature",
-            storageBucket: "thinking-temperature.appspot.com",
-            messagingSenderId: "793103532455",
-            appId: "1:793103532455:web:2962e632b25816e865f682",
-            measurementId: "G-N4GLTXMTK5"
-          };
-          // Initialize Firebase
-          /* firebase.initializeApp(firebaseConfig); */
+    atualizarDados() {
+        getQntPeople()
+            .then(dados => this.setState({ pessoas: dados }))
+            .catch(erro => console.log(erro))
+
+        getTemperature()
+            .then(teste => this.setState({ temperatura: teste }))
+            .catch(erro => console.log(erro))
     }
 
     automaticModeAirConditioning(){
