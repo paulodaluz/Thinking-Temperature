@@ -31,22 +31,24 @@ export default class Home extends Component {
     }
 
     automaticModeAirConditioning(){
-        console.log('Modo Automático ativado')
+        this.setState.automaticModeAir = true;
+        this.setState.onAirConditioning = false;
+        this.setState.offAirConditioning = false;
+        console.log('Modo automático ativado!')
     }
 
     offAirConditioning(){
         this.setState.automaticModeAir = false;
         this.setState.onAirConditioning = false;
         this.setState.offAirConditioning = true;
-        console.log('Modo Automático ativado')
+        console.log('Ar condicionado desligado!')
     }
 
     onAirConditioning() {
         this.setState.automaticModeAir = false;
         this.setState.offAirConditioning = false;
         this.setState.onAirConditioning = true;
-        this.salvarDados();
-        console.log('Modo Automático ativado')
+        console.log('Ar condicionado ligado!')
     }
       
     render() {
