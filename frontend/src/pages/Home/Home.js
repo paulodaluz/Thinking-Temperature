@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
 
 // Importando CSS
 import './Home.css';
-import { getQntPeople, getTemperature } from '../../services/api';
 
 // Import Componentes
 
@@ -17,17 +17,28 @@ export default class Home extends Component {
             offAirConditioning: false,
             onAirConditioning: false,
         }
-        this.atualizarDados()
+        this.getTemperature()
+        this.getQntPeople()
     }
 
-    atualizarDados() {
-        getQntPeople()
-            .then(qntPessoas => this.setState({ qntPessoas }))
-            .catch(erro => console.log(erro))
+    getQntPeople() {
+        return new Promise((resolve, reject) => {
+            firebase.database().ref(`/qntPessoas`)
+                .on('value', snapchot => {
+                    let qntPessoas = snapchot.val()
+                    this.setState({ qntPessoas })
+                })
+        })
+    }
 
-        getTemperature()
-            .then(temperatura => this.setState({ temperatura }))
-            .catch(erro => console.log(erro))
+    getTemperature() {
+        return new Promise((resolve, reject) => {
+            firebase.database().ref(`/temperatura`)
+                .on('value', snapchot => {
+                    let temperatura = snapchot.val()
+                    this.setState({ temperatura })
+                })
+        })
     }
 
     automaticModeAirConditioning(){
