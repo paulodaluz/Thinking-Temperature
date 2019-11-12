@@ -41,11 +41,27 @@ export default class Home extends Component {
         })
     }
 
+    mockTemperatura(temperatura){
+        firebase
+        .database()
+            .ref(`/temperatura`)
+            .set(temperatura)
+    }
+    
+    mockPessoas(pessoas) {
+        firebase
+            .database()
+            .ref(`/qntPessoas`)
+            .set(pessoas)
+    }
+
     automaticModeAirConditioning(){
         this.setState.automaticModeAir = true;
         this.setState.onAirConditioning = false;
         this.setState.offAirConditioning = false;
         console.log('Modo automático ativado!')
+        /* this.mockTemperatura(this.state.temperatura)
+        this.mockPessoas(this.state.qntPessoas) */
     }
 
     offAirConditioning(){
