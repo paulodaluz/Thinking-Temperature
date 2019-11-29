@@ -96,4 +96,4 @@ Para realizar o build do projeto você deve abrir o terminal na pasta do projeto
 
 [Alisson Muhammad](https://www.linkedin.com/in/alissonmuhammad/)
 
-[Vithor Gabriel]
+[Vithor Gabriel]()
